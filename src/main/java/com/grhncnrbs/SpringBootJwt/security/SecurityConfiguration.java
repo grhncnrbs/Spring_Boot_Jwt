@@ -1,2 +1,4 @@
-package com.grhncnrbs.SpringBootJwt.security;public class SecurityConfiguration {
+package com.grhncnrbs.SpringBootJwt.security;
+
+public class SecurityConfiguration {
 }

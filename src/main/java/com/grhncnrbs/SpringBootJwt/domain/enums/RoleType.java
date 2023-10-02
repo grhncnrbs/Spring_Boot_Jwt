@@ -1,2 +1,8 @@
-package com.grhncnrbs.SpringBootJwt.domain.enums;public class RoleType {
+package com.grhncnrbs.SpringBootJwt.domain.enums;
+
+public enum RoleType {
+
+    CUSTOMER,
+    ADMIN,
+    ANONYMOUS,
 }
