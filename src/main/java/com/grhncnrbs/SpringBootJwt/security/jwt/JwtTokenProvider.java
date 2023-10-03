@@ -29,7 +29,7 @@ public class JwtTokenProvider {
                 .signWith(SignatureAlgorithm.HS512, APP_SECRET)
                 .compact();
     }
-    private Long getUserIdFromJwt(String token) {
+    Long getUserIdFromJwt(String token) {
         Claims claims = Jwts.parser().setSigningKey(APP_SECRET).parseClaimsJws(token).getBody();
         return Long.parseLong(claims.getSubject());
     }
@@ -39,7 +39,7 @@ public class JwtTokenProvider {
         return expiration.before(new Date());
     }
 
-    private Boolean validateToken(String token) {
+    Boolean validateToken(String token) {
         try {
             Jwts.parser().setSigningKey(APP_SECRET).parseClaimsJws(token);
             return !isTokenExpired(token);
