@@ -21,3 +21,8 @@ server:
     include-message: always
     include-binding-errors: always
     include-stacktrace: never
+
+SpringBootJwt:
+  app:
+    jwtSecret: 984hg493gh0439rthr0429uruj2309yh937gc763fe87t3f89723gf984hg493gh0439rthr0429uruj2309yh937gc763fe87t3f89723gf
+    jwtExpirationMs: 86400000
