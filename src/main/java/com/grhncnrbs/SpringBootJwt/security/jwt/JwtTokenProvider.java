@@ -24,6 +24,7 @@ public class JwtTokenProvider {
 
         return Jwts.builder()
                 .setSubject(userDetails.getId().toString())
+                .setIssuer("SpringBootJwt")
                 .setIssuedAt(new Date())
                 .setExpiration(expireDate)
                 .signWith(SignatureAlgorithm.HS512, APP_SECRET)
